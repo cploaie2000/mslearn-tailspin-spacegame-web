@@ -11,12 +11,6 @@ variables:
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
 
 
-steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-  inputs:
-    version: '$(dotnetSdkVersion)'
-
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displayName: 'Write build info'
   workingDirectory: $(wwwrootDir)
